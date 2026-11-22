@@ -12,7 +12,7 @@ init: false
 ports:
   5232/tcp: null
 options:
-  username: "rob"
+  username: ""
   password: ""
 schema:
   username: str
