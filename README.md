@@ -1,28 +1,28 @@
 # Home Assistant app repository: Radicale CalDAV
 
-Een Home Assistant app repository met één app: [Radicale](https://radicale.org/), een CalDAV-server.
+A Home Assistant app repository with one app: [Radicale](https://radicale.org/), a CalDAV server.
 
-Doel: een agenda (bijvoorbeeld het brandweerrooster) beschikbaar maken voor Apple Calendar en andere CalDAV-clients, en tegelijk voor Home Assistant.
+Purpose: make a calendar (for example a fire-service roster) available to Apple Calendar and other CalDAV clients, and to Home Assistant at the same time.
 
-## Installatie
+## Installation
 
-1. In Home Assistant: **Instellingen → Apps → App store → ⋮ → Repositories**.
-2. Voeg toe: `https://github.com/filmgarage/ha-app-radicale`
-3. Installeer **Radicale CalDAV** en stel de opties in.
+1. In Home Assistant: **Settings → Apps → App store → ⋮ → Repositories**.
+2. Add: `https://github.com/filmgarage/ha-app-radicale`
+3. Install **Radicale CalDAV** and configure the options.
 
-## Ondersteunde architecturen
+## Supported architectures
 
 - aarch64 (Home Assistant Yellow, Green)
-- amd64 (bijv. NUC)
+- amd64 (for example NUC)
 
 ## Status
 
-Deze app heeft de stage `experimental`. Dat betekent: werkt, maar kan nog veranderen.
+This app has the `experimental` stage. It works, but may still change.
 
-## Versionering
+## Versioning
 
-App-versies volgen [SemVer](https://semver.org/). De versie staat in `radicale/config.yaml` en in `radicale/CHANGELOG.md`.
+App versions follow [SemVer](https://semver.org/). The version is in `radicale/config.yaml` and in `radicale/CHANGELOG.md`.
 
-## Licentie
+## License
 
-MIT. Zie [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).

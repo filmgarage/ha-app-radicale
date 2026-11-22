@@ -1,7 +1,7 @@
 name: Radicale CalDAV
 version: "0.1.0"
 slug: radicale
-description: Radicale CalDAV-server voor gedeelde agenda's (bijv. het brandweerrooster).
+description: CalDAV server (Radicale) for shared calendars, for example a fire-service roster.
 arch:
   - aarch64
   - amd64

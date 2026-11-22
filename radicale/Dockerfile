@@ -1,8 +1,8 @@
 ARG BUILD_FROM
 FROM ${BUILD_FROM}
 
-# Radicale draait als pure Python: geen architectuur-specifieke binaries,
-# dus dezelfde build werkt op aarch64 (Yellow, Green) en amd64 (NUC).
+# Radicale is pure Python with no architecture-specific binaries,
+# so the same build works on aarch64 (Yellow, Green) and amd64 (NUC).
 ARG RADICALE_VERSION=3.6.1
 RUN pip install --no-cache-dir "radicale[bcrypt]==${RADICALE_VERSION}"
 

@@ -1,26 +1,26 @@
 # Radicale CalDAV
 
-Deze app draait [Radicale](https://radicale.org/), een CalDAV-server, op Home Assistant.
+This app runs [Radicale](https://radicale.org/), a CalDAV server, on Home Assistant.
 
-## Configuratie
+## Configuration
 
-| Optie | Beschrijving |
+| Option | Description |
 |---|---|
-| `username` | Gebruikersnaam voor CalDAV-clients (bijv. Apple Calendar). |
-| `password` | Wachtwoord. Verplicht; de app weigert te starten zonder. |
+| `username` | Username for CalDAV clients (for example Apple Calendar). |
+| `password` | Password. Required; the app refuses to start without it. |
 
-Het wachtwoord wordt als bcrypt-hash opgeslagen in `/data/htpasswd`.
+The password is stored as a bcrypt hash in `/data/htpasswd`.
 
-## Verbinden
+## Connecting
 
-Radicale luistert op poort 5232 binnen het Docker-netwerk van Home Assistant. Deze poort is niet naar buiten opengezet.
+Radicale listens on port 5232 inside the Home Assistant Docker network. This port is not opened to the outside.
 
-Apple Calendar vereist HTTPS. Gebruik daarvoor een reverse proxy-app (bijv. Caddy) of Tailscale. Stel daar de proxy in naar de interne app-host op poort 5232.
+Apple Calendar requires HTTPS. Use a reverse proxy app (for example Caddy) or Tailscale for this. Configure the proxy to forward to port 5232 on the internal app host.
 
-## Opslag
+## Storage
 
-Agenda's staan in `/data/collections` en worden meegenomen in de Home Assistant-backup.
+Calendars are stored in `/data/collections` and are included in the Home Assistant backup.
 
 ## Status
 
-Experimenteel. Gebruik de app niet als enige kopie van belangrijke agenda's zonder backup.
+Experimental. Do not rely on this app as the only copy of important calendars without a backup.

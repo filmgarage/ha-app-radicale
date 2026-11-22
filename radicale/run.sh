@@ -1,5 +1,5 @@
 #!/usr/bin/with-contenv bashio
-# Radicale starten met gebruiker/wachtwoord uit de app-opties.
+# Start Radicale with the username and password from the app options.
 set -e
 
 USERNAME="$(bashio::config 'username')"
@@ -8,10 +8,10 @@ DATA_DIR="/data"
 HTPASSWD="${DATA_DIR}/htpasswd"
 
 if [ -z "${PASSWORD}" ]; then
-    bashio::exit.nok "Stel een wachtwoord in via de app-opties."
+    bashio::exit.nok "Set a password in the app options."
 fi
 
-# htpasswd met bcrypt, zonder externe tools (bcrypt zit al in de [bcrypt] extra).
+# Create an htpasswd file with bcrypt, without external tools (bcrypt is included via the [bcrypt] extra).
 python3 - "${USERNAME}" "${PASSWORD}" "${HTPASSWD}" <<'PY'
 import sys, bcrypt
 user, pw, path = sys.argv[1], sys.argv[2].encode(), sys.argv[3]
@@ -37,5 +37,5 @@ filesystem_folder = ${DATA_DIR}/collections
 type = owner_only
 CFG
 
-bashio::log.info "Radicale start op poort 5232"
+bashio::log.info "Starting Radicale on port 5232"
 exec python3 -m radicale --config /etc/radicale/config

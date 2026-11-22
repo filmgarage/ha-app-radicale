@@ -2,6 +2,6 @@
 
 ## 0.1.0
 
-- Eerste versie: Radicale 3.6.1 op basis van de Home Assistant Python-base-image.
-- Authenticatie met htpasswd (bcrypt), configureerbaar via app-opties.
-- Ondersteunt aarch64 en amd64.
+- Initial release: Radicale 3.6.1 on the Home Assistant Python base image.
+- Authentication with htpasswd (bcrypt), configurable through app options.
+- Supports aarch64 and amd64.
